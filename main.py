@@ -15,6 +15,7 @@ from slowapi import Limiter
 from slowapi.errors import RateLimitExceeded
 from slowapi.middleware import SlowAPIMiddleware
 from slowapi.util import get_remote_address
+from dotenv import load_dotenv
 
 # БД
 
@@ -183,6 +184,8 @@ async def update_book_crud(book_id: int, book_update: BookUpdate, owner_id: int)
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
+
+load_dotenv()
 
 KEY = os.getenv("KEY")
 ALGORITHM = os.getenv("ALGORITHM")
