@@ -281,7 +281,7 @@ async def login_for_access_token(request: Request, user_credentials: UserLogin):
         )
     access_token = create_token(data={"sub": user.username})
     logging.info(f"User logged in: {user.username}")
-    return {"access_token": access_token, "token_type": "bearer"}
+    return Token(access_token=access_token, token_type="bearer")
 
 async def check_tokens(user: UserInDB = Depends(current_user)):
     if user.tokens_left <= 0:
