@@ -1,0 +1,8 @@
+[
+    {
+        "username": "user2",
+        "id": 1,
+        "hashed_password": "$2b$12$noZ.pgqKVeK01Rvw7DDkVuGo9M2VDawE5SWgQ6a12O6/F5zCMElxe",
+        "tokens_left": 1000
+    }
+]
